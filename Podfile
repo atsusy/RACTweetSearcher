@@ -6,7 +6,6 @@ target "RACTweetSearcher" do
   pod 'Mantle'
   pod 'SDWebImage'
   pod 'NSDate+TimeAgo'
-  pod 'SVPullToRefresh'
 end
 
 target "RACTweetSearcherTests" do
