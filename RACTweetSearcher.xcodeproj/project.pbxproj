@@ -23,7 +23,7 @@
 		316B8EB91970FC6A0071768C /* RACTweetSearcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316B8EB81970FC6A0071768C /* RACTweetSearcherTests.m */; };
 		31A50D2119710D3E00BA4425 /* MMMTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A50D2019710D3E00BA4425 /* MMMTwitterClient.m */; };
 		31A50D2419711D2300BA4425 /* MMMCircleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A50D2319711D2300BA4425 /* MMMCircleImageView.m */; };
-		31A50D27197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A50D26197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.m */; };
+		31AFB95119832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AFB95019832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.m */; };
 		31C7DBC21976680B002917D9 /* MMMSearchTweetFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C7DBC11976680B002917D9 /* MMMSearchTweetFilterViewController.m */; };
 		31DB327E197BF49C007DB65F /* UITextField+RACKeyboardSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DB327D197BF49C007DB65F /* UITextField+RACKeyboardSupport.m */; };
 		31EA24901970FE0400827170 /* MMMTweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EA248F1970FE0400827170 /* MMMTweetModel.m */; };
@@ -68,8 +68,8 @@
 		31A50D2019710D3E00BA4425 /* MMMTwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMTwitterClient.m; sourceTree = "<group>"; };
 		31A50D2219711D2300BA4425 /* MMMCircleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMCircleImageView.h; sourceTree = "<group>"; };
 		31A50D2319711D2300BA4425 /* MMMCircleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMCircleImageView.m; sourceTree = "<group>"; };
-		31A50D25197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MMMTwitterClient+RACSignalSupport.h"; path = "../MMMTwitterClient+RACSignalSupport.h"; sourceTree = "<group>"; };
-		31A50D26197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MMMTwitterClient+RACSignalSupport.m"; path = "../MMMTwitterClient+RACSignalSupport.m"; sourceTree = "<group>"; };
+		31AFB94F19832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMMTwitterClient+RACSignalSupport.h"; sourceTree = "<group>"; };
+		31AFB95019832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MMMTwitterClient+RACSignalSupport.m"; sourceTree = "<group>"; };
 		31C7DBC01976680B002917D9 /* MMMSearchTweetFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMSearchTweetFilterViewController.h; sourceTree = "<group>"; };
 		31C7DBC11976680B002917D9 /* MMMSearchTweetFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMSearchTweetFilterViewController.m; sourceTree = "<group>"; };
 		31DB327C197BF49C007DB65F /* UITextField+RACKeyboardSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+RACKeyboardSupport.h"; sourceTree = "<group>"; };
@@ -151,6 +151,8 @@
 		316B8E901970FC6A0071768C /* RACTweetSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				31AFB94F19832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.h */,
+				31AFB95019832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.m */,
 				316B8E991970FC6A0071768C /* MMMAppDelegate.h */,
 				316B8E9A1970FC6A0071768C /* MMMAppDelegate.m */,
 				316B8E9C1970FC6A0071768C /* Main_iPhone.storyboard */,
@@ -171,8 +173,6 @@
 				31EA248F1970FE0400827170 /* MMMTweetModel.m */,
 				31A50D1F19710D3E00BA4425 /* MMMTwitterClient.h */,
 				31A50D2019710D3E00BA4425 /* MMMTwitterClient.m */,
-				31A50D25197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.h */,
-				31A50D26197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.m */,
 				31A50D2219711D2300BA4425 /* MMMCircleImageView.h */,
 				31A50D2319711D2300BA4425 /* MMMCircleImageView.m */,
 				31DB327C197BF49C007DB65F /* UITextField+RACKeyboardSupport.h */,
@@ -360,10 +360,10 @@
 				31EA24991970FFAB00827170 /* MMMTweetViewModel.m in Sources */,
 				316B8E9B1970FC6A0071768C /* MMMAppDelegate.m in Sources */,
 				31EA24901970FE0400827170 /* MMMTweetModel.m in Sources */,
-				31A50D27197128A200BA4425 /* MMMTwitterClient+RACSignalSupport.m in Sources */,
 				31A50D2119710D3E00BA4425 /* MMMTwitterClient.m in Sources */,
 				31DB327E197BF49C007DB65F /* UITextField+RACKeyboardSupport.m in Sources */,
 				316B8E971970FC6A0071768C /* main.m in Sources */,
+				31AFB95119832A5200481DC7 /* MMMTwitterClient+RACSignalSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

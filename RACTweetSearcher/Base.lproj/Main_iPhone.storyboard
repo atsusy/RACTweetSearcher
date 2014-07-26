@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <containerView key="tableHeaderView" contentMode="scaleToFill" id="AcX-GZ-HBG">
-                            <rect key="frame" x="0.0" y="64" width="320" height="211"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="78"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <connections>
@@ -23,7 +23,7 @@
                         </containerView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="TweetCell" rowHeight="97" id="MqJ-Fr-9xx" customClass="MMMSearchTweetTableViewCell">
-                                <rect key="frame" x="0.0" y="297" width="320" height="97"/>
+                                <rect key="frame" x="0.0" y="164" width="320" height="97"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MqJ-Fr-9xx" id="FAV-Pe-cnN">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
@@ -142,30 +142,30 @@
                         <viewControllerLayoutGuide type="bottom" id="P4M-IL-hAp"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gVr-wr-qwW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyword like #swift, freedom, etc." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZl-XG-6SQ">
-                                <rect key="frame" x="20" y="30" width="285" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search public timeline" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZl-XG-6SQ">
+                                <rect key="frame" x="6" y="6" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-zi-abv">
-                                <rect key="frame" x="20" y="88" width="285" height="29"/>
+                                <rect key="frame" x="6" y="44" width="306" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Off"/>
-                                    <segment title="Negative"/>
-                                    <segment title="Positive"/>
+                                    <segment title="All"/>
+                                    <segment title=":("/>
+                                    <segment title=":)"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xDu-Ir-QN2">
-                                <rect key="frame" x="20" y="144" width="285" height="29"/>
+                                <rect key="frame" x="223" y="6" width="89" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="All languages"/>
-                                    <segment title="One's language"/>
+                                    <segment title="All"/>
+                                    <segment title="Ones"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>

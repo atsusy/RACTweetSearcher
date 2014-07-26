@@ -69,7 +69,7 @@
     [queryDict setObject:[@[self.keyword, emotions[self.emotion]] componentsJoinedByString:@" "]
                   forKey:@"q"];
     
-    NSArray *languages = @[@"", [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]];
+    NSArray *languages = @[@"", [NSLocale preferredLanguages][0]];
     [queryDict setObject:languages[self.language] forKey:@"lang"];
  
     if(sinceId){

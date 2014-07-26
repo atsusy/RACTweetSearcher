@@ -12,10 +12,10 @@
 "UDZ-zi-abv.segmentTitles[0]" = "なし";
 
 /* Class = "IBUISegmentedControl"; UDZ-zi-abv.segmentTitles[1] = "Negative"; ObjectID = "UDZ-zi-abv"; */
-"UDZ-zi-abv.segmentTitles[1]" = "ネガティブ";
+"UDZ-zi-abv.segmentTitles[1]" = ":(";
 
 /* Class = "IBUISegmentedControl"; UDZ-zi-abv.segmentTitles[2] = "Positive"; ObjectID = "UDZ-zi-abv"; */
-"UDZ-zi-abv.segmentTitles[2]" = "ポジティブ";
+"UDZ-zi-abv.segmentTitles[2]" = ":)";
 
 /* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "WGN-ac-9TG"; */
 "WGN-ac-9TG.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
@@ -24,10 +24,10 @@
 "nAz-Nt-41V.normalTitle" = "検索";
 
 /* Class = "IBUISegmentedControl"; xDu-Ir-QN2.segmentTitles[0] = "All languages"; ObjectID = "xDu-Ir-QN2"; */
-"xDu-Ir-QN2.segmentTitles[0]" = "全言語";
+"xDu-Ir-QN2.segmentTitles[0]" = "全て";
 
 /* Class = "IBUISegmentedControl"; xDu-Ir-QN2.segmentTitles[1] = "One's language"; ObjectID = "xDu-Ir-QN2"; */
 "xDu-Ir-QN2.segmentTitles[1]" = "自国語";
 
 /* Class = "IBUITextField"; placeholder = "Keyword like #swift, freedom, etc."; ObjectID = "yZl-XG-6SQ"; */
-"yZl-XG-6SQ.placeholder" = "#swift などの検索キーワードを入力";
+"yZl-XG-6SQ.placeholder" = "タイムラインを検索";
