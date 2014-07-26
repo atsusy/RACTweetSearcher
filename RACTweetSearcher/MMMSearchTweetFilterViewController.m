@@ -42,11 +42,8 @@
     RACChannelTo(self.viewModel, language) =
         [self.languageControl rac_newSelectedSegmentIndexChannelWithNilValue:@(0)];
     
-    @weakify(self);
-    [self.viewModel.searchTweets.executionSignals subscribeNext:^(id _){
-        @strongify(self);
-        [self.keywordText resignFirstResponder];
-    }];
+    [self rac_liftSelector:@selector(hideKeyboard:)
+               withSignals:self.viewModel.searchTweets.executionSignals, nil];
 }
 
 - (void)viewDidLoad
@@ -59,6 +56,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)hideKeyboard:(NSArray *)r
+{
+    [self.keywordText resignFirstResponder];
 }
 
 @end

@@ -49,37 +49,21 @@
     self.searchButton.rac_command = self.viewModel.searchTweets;
     self.refreshControl.rac_command = self.viewModel.refreshTweets;
     
+    [self rac_liftSelector:@selector(reloadTweets:)
+               withSignals:[self.viewModel.searchTweets.executionSignals flatten], nil];
+    
+    [self rac_liftSelector:@selector(refreshTweets:)
+               withSignals:[self.viewModel.refreshTweets.executionSignals flatten], nil];
+    
+    RACSignal *updateVisibleCellsSignal = [RACSignal interval:1
+                                                  onScheduler:RACScheduler.mainThreadScheduler];
     @weakify(self);
-    
-    [[self.viewModel.searchTweets.executionSignals flatten] subscribeNext:^(NSArray *r){
-        @strongify(self);
-        
-        self.title = self.viewModel.keyword;
-        [self.tableView reloadData];
-    }];
-    
-    [[self.viewModel.refreshTweets.executionSignals flatten] subscribeNext:^(NSArray *r){
-        @strongify(self);
-        
-        [self.tableView reloadData];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[r count]
-                                                    inSection:0];
-        [self.tableView scrollToRowAtIndexPath:indexPath
-                              atScrollPosition:UITableViewScrollPositionTop
-                                      animated:NO];
-    }];
-    
-    RACSignal *updateVisibleCells = [RACSignal interval:1
-                                            onScheduler:RACScheduler.mainThreadScheduler];
-    [[updateVisibleCells throttle:INFINITY
-                valuesPassingTest:^(id _){
-                    @strongify(self);
-                    return self.isScrolling;
-                }] subscribeNext:^(id _){
-                    @strongify(self);
-                    [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows]
-                                          withRowAnimation:UITableViewRowAnimationNone];
-                }];
+    [self rac_liftSelector:@selector(updateVisibleCells:)
+               withSignals:[updateVisibleCellsSignal throttle:INFINITY
+                                             valuesPassingTest:^(id _){
+                                                 @strongify(self);
+                                                 return self.isScrolling;
+                                             }], nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -88,6 +72,28 @@
         self.filterViewController =
             (MMMSearchTweetFilterViewController *)segue.destinationViewController;
     }
+}
+
+- (void)reloadTweets:(NSArray *)tweets
+{
+    self.title = self.viewModel.keyword;
+    [self.tableView reloadData];
+}
+
+- (void)refreshTweets:(NSArray *)tweets
+{
+    [self.tableView reloadData];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[tweets count]
+                                                inSection:0];
+    [self.tableView scrollToRowAtIndexPath:indexPath
+                          atScrollPosition:UITableViewScrollPositionTop
+                                  animated:NO];
+}
+
+- (void)updateVisibleCells:(id)_
+{
+    [self.tableView reloadRowsAtIndexPaths:[self.tableView indexPathsForVisibleRows]
+                          withRowAnimation:UITableViewRowAnimationNone];
 }
 
 #pragma mark - UITableViewDataSourceDelegate
